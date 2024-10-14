@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menampilkan Bilangan dari 1 sampai n</title>
+</head>
+<body>
+    <h1>Menampilkan Bilangan dari 1 sampai n</h1>
+    <label for="inputN">Masukkan nilai n (n >= 1):</label>
+    <input type="number" id="inputN" min="1">
+
+    <button
+        onclick="
+            var n = parseInt(document.getElementById('inputN').value);
+            if (n >= 1) {
+                var hasil = '';
+                for (var i = 1; i <= n; i++) {
+                    hasil += i + ' ';
+                }
+                alert('Bilangan dari 1 sampai ' + n + ': ' + hasil);
+            } else {
+                alert('Nilai n harus lebih besar atau sama dengan 1.');
+            }
+        ">
+        Tampilkan
+    </button>
+</body>
+</html>
